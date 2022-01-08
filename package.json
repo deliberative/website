@@ -1,0 +1,78 @@
+{
+  "name": "deliberative.eu",
+  "description": "Source code for the leading deliberative democracy platform, written in Svelte, Tailwind, Typescript.",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deliberative/deliberative.eu.git"
+  },
+  "author": {
+    "name": "Dimitris Karoukis (fuzzc0re)",
+    "email": "dim@karoukis.com",
+    "url": "https://github.com/fuzzc0re"
+  },
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/deliberative/deliberative.eu/issues"
+  },
+  "keywords": [
+    "svelte",
+    "typescript",
+    "ts-jest",
+    "rollup"
+  ],
+  "homepage": "https://github.com/deliberative/deliberative.eu",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development rollup -c -w",
+    "build": "cross-env NODE_ENV=production rollup -c",
+    "postbuild": "cross-env NODE_ENV=production node scripts/postBuild.js",
+    "validate": "svelte-check",
+    "test": "jest --config jest.config.json",
+    "format": "prettier --write src",
+    "lint": "eslint --ext .js,.ts,.svelte src",
+    "prepublishOnly": "npm-run-all -s test lint",
+    "preversion": "npm-run-all -s lint format"
+  },
+  "dependencies": {
+    "svelte": "^3.38.2",
+    "svelte-spa-router": "^3.2.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-html": "^0.2.4",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@tsconfig/svelte": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "autoprefixer": "^10.4.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsdoc": "^37.5.1",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-svelte3": "^3.3.0",
+    "jest": "^27.0.4",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.5",
+    "prettier": "^2.3.1",
+    "prettier-plugin-svelte": "^2.3.1",
+    "rollup": "^2.52.2",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "svelte-check": "^2.2.0",
+    "svelte-preprocess": "^4.7.3",
+    "tailwindcss": "^3.0.12",
+    "terser": "^5.10.0",
+    "ts-jest": "^27.0.3",
+    "typescript": "^4.3.4"
+  }
+}
