@@ -15,18 +15,12 @@
   "bugs": {
     "url": "https://github.com/deliberative/deliberative.eu/issues"
   },
-  "keywords": [
-    "svelte",
-    "typescript",
-    "ts-jest",
-    "rollup"
-  ],
+  "keywords": ["svelte", "typescript", "ts-jest", "rollup"],
   "homepage": "https://github.com/deliberative/deliberative.eu",
   "main": "build/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development rollup -c -w",
     "build": "cross-env NODE_ENV=production rollup -c",
-    "postbuild": "cross-env NODE_ENV=production node scripts/postBuild.js",
     "validate": "svelte-check",
     "test": "jest --config jest.config.json",
     "format": "prettier --write src",
@@ -73,6 +67,7 @@
     "tailwindcss": "^3.0.12",
     "terser": "^5.10.0",
     "ts-jest": "^27.0.3",
+    "tslib": "^2.3.1",
     "typescript": "^4.3.4"
   }
 }
