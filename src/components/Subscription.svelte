@@ -6,12 +6,19 @@
   let isSubscribed = false;
   let isUnsubscribed = !isSubscribed;
   let hasAgreedToSubscribe = false;
+  let hadError = false;
+
+  const onInput = () => {
+    hadError = false;
+    isSubscribed = false;
+  }
 
   const handleSubscribe = async () => {
     try {
       if (email.length < 5) return;
       if (!hasAgreedToSubscribe) return;
 
+      hadError = false;
       isSubscribing = true;
 
       const headers = new Headers({
@@ -30,20 +37,21 @@
       });
 
       const response = await fetch(req);
+      const resJson = await response.json();
 
       isSubscribing = false;
-      if (response.statusCode === 200) {
+      if (resJson.id) {
         isSubscribed = true;
-      } else {
+      } else if (resJson.message) {
         isSubscribed = false;
+        hadError = true;
       }
       isUnsubscribed = !isSubscribed;
-
-      console.log(response);
     } catch (e) {
       console.log(e);
+      hadError = true;
       isSubscribed = false;
-      isSubscribing = true;
+      isSubscribing = false;
       isUnsubscribed = !isSubscribed;
     }
   };
@@ -66,12 +74,28 @@
         placeholder="your@email.com"
         class="w-full bg-gray-100 rounded border border-gray-300 focus:ring-2 focus:bg-white focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         bind:value="{email}"
+        on:input="{onInput}"
       />
     </div>
     {#if isSubscribing}
       <Loading />
     {:else if isSubscribed}
       <Loading />
+      <button
+        disabled
+        class="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded"
+        on:click="{handleSubscribe}"
+      >
+        Subscribed
+      </button>
+    {:else if hadError}
+      <button
+        disabled
+        class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+        on:click="{handleSubscribe}"
+      >
+        Error!
+      </button>
     {:else if isUnsubscribed}
       <button
         class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
