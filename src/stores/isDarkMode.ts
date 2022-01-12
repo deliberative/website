@@ -1,13 +1,19 @@
 import { writable } from 'svelte/store';
 
-const localStorageThemeIsDark = localStorage.getItem('theme') === 'dark';
-const localStorageThemeIsNull = localStorage.getItem('theme') === null;
+const storedThemeDark = localStorage.getItem('theme') === 'dark';
 const matchMediaDark = window.matchMedia(
   '(prefers-color-scheme: dark)',
 ).matches;
 
-const isDarkMode = writable(
-  localStorageThemeIsDark || (localStorageThemeIsNull && matchMediaDark),
-);
+const isDarkMode = writable(storedThemeDark || matchMediaDark);
+
+isDarkMode.subscribe((value) => {
+  localStorage.setItem('theme', value ? 'dark' : 'light');
+  if (value) {
+    window.document.body.classList.add('dark');
+  } else {
+    window.document.body.classList.remove('dark');
+  }
+});
 
 export default isDarkMode;

@@ -1,7 +1,7 @@
 {
   "name": "deliberative.eu",
   "description": "Source code for the leading deliberative democracy platform, written in Svelte, Tailwind, Typescript.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deliberative/deliberative.eu.git"

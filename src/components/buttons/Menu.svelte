@@ -1,7 +1,7 @@
 <button
   data-collapse-toggle="mobile-menu-4"
   type="button"
-  class="md:hidden text-gray-500 hover:bg-gray-100focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-lg text-sm p-2 inline-flex items-center dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+  class="md:hidden text-indigo-500 dark:text-indigo-400 no-underline hover:text-indigo-800 dark:hover:text-indigo-300 focus:outline-none focus:ring-2 focus:ring-gray-200 rounded-lg text-sm p-2 inline-flex items-center dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
   aria-controls="mobile-menu-4"
   aria-expanded="false"
 >

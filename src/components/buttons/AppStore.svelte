@@ -1,6 +1,6 @@
 <button>
   <svg
-    class="h-12 pr-4 bounce-top-icons"
+    class="h-11 pr-2 bounce-top-icons"
     viewBox="0 0 1477 500"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

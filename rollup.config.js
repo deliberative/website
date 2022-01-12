@@ -17,7 +17,7 @@ export default {
     sourcemap: !production,
     format: 'es',
     name: 'deliberative.eu',
-    dir: production ? 'build' : 'public/build',
+    dir: production ? 'dist' : 'public/build',
     manualChunks: (moduleName) => {
       // Every module whose name includes `node_modules` should be in vendor:
       if (moduleName.includes('node_modules')) {
@@ -95,7 +95,7 @@ export default {
     production &&
       html({
         fileName: 'index.html',
-        title: 'Deliberative is the leading blockchain-based liquid democracy platform.',
+        title: 'Deliberative is a blockchain democracy infrastructure provider.',
         meta: [
           {
             charset: 'utf8',
@@ -107,23 +107,23 @@ export default {
           {
             name: 'description',
             content:
-              'This is the leading platform for liquid deliberative democracy and it is backed by the DLB token.',
+              'We use liquid voting and tokenomics in order to create the infrastructure for resilient, internet-era democracies',
           },
           { name: 'robots', content: 'index,follow' },
           {
             name: 'keywords',
             content:
-              'substrate,delib,dlb,democracy,liquid democracy,liquid voting,deliberative democracy,deliberate,europe,voting,blockchain,blockchain voting,cryptocurrency',
+              'substrate,delib,dlb,democracy,liquid democracy,liquid voting,generalized liquid voting,approval voting,generalized approval voting,deliberative democracy,deliberate,europe,voting,blockchain,blockchain voting,cryptocurrency',
           },
           {
-            httpEquiv: 'X-UA-Compatible',
+            'http-equiv': 'X-UA-Compatible',
             content: 'ie=edge',
           },
         ],
         attributes: {
           html: {
             lang: 'en',
-            class: 'dark',
+            // class: 'dark',
           },
         },
       }),
