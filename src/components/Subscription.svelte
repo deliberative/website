@@ -16,6 +16,8 @@
 
       const headers = new Headers({
         'content-type': 'application/json',
+        'access-control-allow-origin', "*",
+        'access-control-allow-headers', "*"
       });
 
       const body = JSON.stringify({
@@ -26,6 +28,7 @@
         method: 'POST',
         mode: 'cors',
         credentials: 'same-origin',
+        referrer: "about:client",
         headers,
         body,
       });
