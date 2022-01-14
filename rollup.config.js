@@ -1,6 +1,7 @@
 import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import html from '@rollup/plugin-html';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
@@ -27,6 +28,10 @@ export default {
     },
   },
   plugins: [
+    replace({
+      preventAssignment: true,
+      'process.env.NODE_ENV': JSON.stringify(production),
+    }),
     svelte({
       preprocess: sveltePreprocess({
         sourceMap: !production,
@@ -74,6 +79,7 @@ export default {
         port: 5000,
         contentBase: 'public',
         verbose: true,
+        spa: true,
       }),
 
     // Watch the `public` directory and refresh the
@@ -95,7 +101,7 @@ export default {
     production &&
       html({
         fileName: 'index.html',
-        title: 'Deliberative is a blockchain democracy infrastructure provider.',
+        title: 'The deliberative democracy infrastructure provider.',
         meta: [
           {
             charset: 'utf8',
@@ -107,7 +113,7 @@ export default {
           {
             name: 'description',
             content:
-              'We use liquid voting and tokenomics in order to create the infrastructure for resilient, internet-era democracies',
+              'We use liquid voting and tokenomics to create the infrastructure for resilient, internet-era democracies',
           },
           { name: 'robots', content: 'index,follow' },
           {

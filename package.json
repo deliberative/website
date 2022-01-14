@@ -1,10 +1,10 @@
 {
   "name": "deliberative.eu",
-  "description": "Source code for the leading deliberative democracy platform, written in Svelte, Tailwind, Typescript.",
-  "version": "0.0.2",
+  "description": "Source code for the deliberative democracy infrastructure provider, written in Svelte, Tailwind, Typescript.",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deliberative/deliberative.eu.git"
+    "url": "git+https://github.com/deliberative/website.git"
   },
   "author": {
     "name": "Dimitris Karoukis (fuzzc0re)",
@@ -13,11 +13,17 @@
   },
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/deliberative/deliberative.eu/issues"
+    "url": "https://github.com/deliberative/website/issues"
   },
-  "keywords": ["svelte", "typescript", "ts-jest", "rollup"],
-  "homepage": "https://github.com/deliberative/deliberative.eu",
-  "main": "build/index.js",
+  "keywords": [
+    "svelte",
+    "typescript",
+    "taliwindcss",
+    "rollup",
+    "substrate"
+  ],
+  "homepage": "https://github.com/deliberative/website",
+  "main": "src/index.ts",
   "scripts": {
     "start": "cross-env NODE_ENV=development rollup -c -w",
     "build": "cross-env NODE_ENV=production rollup -c",
@@ -29,13 +35,24 @@
     "preversion": "npm-run-all -s lint format"
   },
   "dependencies": {
-    "svelte": "^3.38.2",
-    "svelte-spa-router": "^3.2.0"
+    "@polkadot/api": "^7.2.1",
+    "@polkadot/extension-dapp": "^0.42.4",
+    "@polkadot/keyring": "^8.2.2",
+    "@polkadot/networks": "^8.2.2",
+    "@polkadot/types": "^7.2.1",
+    "@polkadot/ui-keyring": "^0.88.1",
+    "@polkadot/ui-settings": "^0.88.1",
+    "@polkadot/util": "^8.2.2",
+    "@polkadot/util-crypto": "^8.2.2",
+    "history": "^5.2.0",
+    "idb": "^7.0.0",
+    "svelte": "^3.38.2"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-html": "^0.2.4",
     "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^3.0.1",
     "@rollup/plugin-typescript": "^8.2.1",
     "@tsconfig/svelte": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
@@ -69,5 +86,21 @@
     "ts-jest": "^27.0.3",
     "tslib": "^2.3.1",
     "typescript": "^4.3.4"
+  },
+  "engines": {
+    "node": ">=14",
+    "npm": ">=7"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,50 +1,35 @@
-<script>
-  import Router from 'svelte-spa-router';
-  import { wrap } from 'svelte-spa-router/wrap';
+<script type="ts">
+  import { onMount } from 'svelte';
+  import type { SvelteComponent } from 'svelte';
+  import type { BrowserHistory } from 'history';
 
   import Header from './components/Header.svelte';
   import Footer from './components/Footer.svelte';
-  import Loading from './components/Loading.svelte';
 
-  import Home from './routes/Home.svelte';
-  import NotFound from './routes/NotFound.svelte';
+  export let history: BrowserHistory;
 
-  const routes = {
-    // Exact path
-    '/': Home,
-
-    '/blog': wrap({
-      asyncComponent: () => import('./routes/BlogPosts.svelte'),
-      loadingComponent: Loading,
-    }),
-
-    '/explorer': wrap({
-      asyncComponent: () => import('./routes/BlockExplorer.svelte'),
-      loadingComponent: Loading,
-    }),
-
-    /* '/about': wrap({ */
-    /*   asyncComponent: () => import('./routes/About.svelte'), */
-    /* }), */
-    /*  */
-    /* '/landing': wrap({ */
-    /*   asyncComponent: () => import('./routes/Landing.svelte'), */
-    /* }), */
-
-    // Using named parameters, with last being optional
-    /* '/author/:first/:last?': Author, */
-
-    // Wildcard parameter
-    /* '/book/*': Book, */
-
-    '*': NotFound,
+  const routeHandler = async (url: string) => {
+    switch (url) {
+      case '/':
+        return (await import('./routes/Home.svelte')).default;
+      case '/blog':
+        return (await import('./routes/BlogPosts.svelte')).default;
+      case '/explorer':
+        return (await import('./routes/BlockExplorer.svelte')).default;
+      default:
+        return (await import('./routes/NotFound.svelte')).default;
+    }
   };
+
+  let Router: SvelteComponent;
+  onMount(async () => {
+    const path = history.location.pathname;
+    Router = await routeHandler(path);
+  });
 </script>
 
 <Header />
-
-<Router routes="{routes}" restoreScrollState="{true}" />
-
+<svelte:component this="{Router}" />
 <Footer />
 
 <style lang="postcss" global>

@@ -1,11 +1,6 @@
-<script>
-  import { link } from 'svelte-spa-router';
-</script>
-
 <a
   class="flex items-center text-indigo-500 dark:text-indigo-400 no-underline hover:text-indigo-800 dark:hover:text-indigo-300 font-bold text-2xl lg:text-4xl"
   href="/"
-  use:link
 >
   <svg
     class="h-9 fill-current pr-2"

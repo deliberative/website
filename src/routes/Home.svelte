@@ -5,7 +5,5 @@
 </script>
 
 <Hero />
-
 <Features />
-
 <Steps />
