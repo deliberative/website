@@ -21,7 +21,9 @@ const createSubscribedEmailsStore = () => {
     JSON.parse(localStorage.getItem('subscriptions') || defaultItemsString),
   );
 
-  subscribe((value) => localStorage.setItem('subscriptions', JSON.stringify(value)));
+  subscribe((value) =>
+    localStorage.setItem('subscriptions', JSON.stringify(value)),
+  );
 
   return {
     isSubscribed: (email: string) => {

@@ -5,7 +5,14 @@ import type { IBase } from './Base';
 import type { IParticipant } from './Participant';
 import type { IAlternative } from './Alternative';
 
-import { sha256, getItem, getAllItems, setItem, updateItem, removeItem } from '../utils/db';
+import {
+  sha256,
+  getItem,
+  getAllItems,
+  setItem,
+  updateItem,
+  removeItem,
+} from '../utils/db';
 
 export interface IDemocracy extends IBase {
   id: string;

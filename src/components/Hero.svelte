@@ -28,8 +28,8 @@
       <p
         class="leading-normal text-base md:text-2xl text-black dark:text-gray-300 mb-8 text-center md:text-left slide-in-bottom-subtitle"
       >
-        We use liquid voting and tokenomics in order to create the
-        infrastructure for resilient, internet-era democracies.
+        We use liquid voting and tokenomics to create the infrastructure for
+        resilient, internet-era democracies.
       </p>
 
       <p

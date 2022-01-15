@@ -64,10 +64,16 @@
   };
 </script>
 
-<div class="container px-5 py-8 flex flex-wrap mx-auto items-center border-1 border-gray-400">
-  <div class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start">
+<div
+  class="container px-5 py-8 flex flex-wrap mx-auto items-center border-1 border-gray-400"
+>
+  <div
+    class="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start"
+  >
     <div class="relative sm:w-64 w-40 sm:mr-4 mr-2">
-      <label for="footer-field" class="leading-7 text-sm text-gray-600">Your email address</label>
+      <label for="footer-field" class="leading-7 text-sm text-gray-600"
+        >Your email address</label
+      >
       <input
         type="text"
         id="footer-field"
@@ -105,9 +111,12 @@
         Subscribe
       </button>
     {/if}
-    <p class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center">
+    <p
+      class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center"
+    >
       Subscribe to our newsletter to get updates about upcoming coin offerings,
-      <br class="lg:block hidden" />presales, airdrops and other interesting stuff.
+      <br class="lg:block hidden" />presales, airdrops and other interesting
+      stuff.
     </p>
   </div>
   <div class="flex flex-wrap mt-5">
@@ -118,8 +127,11 @@
       class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
       bind:value="{hasAgreedToSubscribe}"
     />
-    <label for="checkbox-1" class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
-      >I agree to receive the Deliberative Technologies newsletter and I have read and accept the <a
+    <label
+      for="checkbox-1"
+      class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+      >I agree to receive the Deliberative Technologies newsletter and I have
+      read and accept the <a
         href="https://www.sendinblue.com/legal/termsofuse/"
         class="text-blue-600 hover:underline dark:text-blue-500"
         target="_blank"

@@ -1,7 +1,7 @@
 {
   "name": "deliberative.eu",
   "description": "Source code for the deliberative democracy infrastructure provider, written in Svelte, Tailwind, Typescript.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deliberative/website.git"
@@ -15,13 +15,7 @@
   "bugs": {
     "url": "https://github.com/deliberative/website/issues"
   },
-  "keywords": [
-    "svelte",
-    "typescript",
-    "taliwindcss",
-    "rollup",
-    "substrate"
-  ],
+  "keywords": ["svelte", "typescript", "taliwindcss", "rollup", "substrate"],
   "homepage": "https://github.com/deliberative/website",
   "main": "src/index.ts",
   "scripts": {
@@ -92,15 +86,7 @@
     "npm": ">=7"
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }

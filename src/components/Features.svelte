@@ -1,5 +1,5 @@
 <section class="text-gray-400 bg-white dark:bg-gray-900 body-font">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container px-5 py-16 mx-auto">
     <div
       class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-800 sm:flex-row flex-col"
     >
@@ -25,8 +25,9 @@
           Generalized Liquid Voting
         </h2>
         <p class="leading-relaxed text-base">
-          Voters participate in the democracy when they want to. If not, they
-          can transfer pecentages of their voting power to other voters.
+          Voters participate in the decision making if and when they want to. If
+          not, they can transfer pecentages of their voting power to other
+          voters.
         </p>
         <a
           href="https://arxiv.org/pdf/2109.01436.pdf"
@@ -58,8 +59,8 @@
           Dynamic Parliament
         </h2>
         <p class="leading-relaxed text-base">
-          Those with the most accumulated power become members of a dynamic
-          parliament for a specified time.
+          Those with the most accumulated voting power become members of a
+          dynamic parliament for a specified time.
         </p>
         <a
           href="https://arxiv.org/pdf/2109.01436.pdf"

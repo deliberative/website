@@ -25,7 +25,9 @@ export const getParticipant = async (hash: string): Promise<IParticipant> => {
   }
 };
 
-export const getAllParticipants = async (democracyId: string): Promise<IParticipant[]> => {
+export const getAllParticipants = async (
+  democracyId: string,
+): Promise<IParticipant[]> => {
   try {
     const participants = (await getAllItems('participants')) as IParticipant[];
     const participantsForSpecificDemocracy: IParticipant[] = [];
@@ -43,7 +45,9 @@ export const getAllParticipants = async (democracyId: string): Promise<IParticip
   }
 };
 
-export const setParticipant = async (participant: IParticipant): Promise<void> => {
+export const setParticipant = async (
+  participant: IParticipant,
+): Promise<void> => {
   try {
     await setItem('participants', participant);
   } catch (error) {

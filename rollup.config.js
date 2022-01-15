@@ -101,7 +101,7 @@ export default {
     production &&
       html({
         fileName: 'index.html',
-        title: 'The deliberative democracy infrastructure provider.',
+        title: 'The deliberative democracy infrastructure.',
         meta: [
           {
             charset: 'utf8',
@@ -115,11 +115,19 @@ export default {
             content:
               'We use liquid voting and tokenomics to create the infrastructure for resilient, internet-era democracies',
           },
+          {
+            name: 'author',
+            content: 'Fuzznets P.C.',
+          },
+          {
+            name: 'copyright',
+            content: 'Fuzznets P.C.',
+          },
           { name: 'robots', content: 'index,follow' },
           {
             name: 'keywords',
             content:
-              'substrate,delib,dlb,democracy,liquid democracy,liquid voting,generalized liquid voting,approval voting,generalized approval voting,deliberative democracy,deliberate,europe,voting,blockchain,blockchain voting,cryptocurrency',
+              'substrate,delib,dlb,democracy,liquid democracy,liquid voting,generalized liquid voting,approval voting,generalized approval voting,deliberative democracy,deliberate,deliberative democracy infrastructure,infrastructure provider,europe,voting,blockchain,blockchain voting,cryptocurrency',
           },
           {
             'http-equiv': 'X-UA-Compatible',

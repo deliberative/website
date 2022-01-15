@@ -19,7 +19,9 @@ export const getAlternative = async (hash: string): Promise<IAlternative> => {
   }
 };
 
-export const getAllAlternatives = async (democracyId: string): Promise<IAlternative[]> => {
+export const getAllAlternatives = async (
+  democracyId: string,
+): Promise<IAlternative[]> => {
   try {
     const alternatives = (await getAllItems('alternatives')) as IAlternative[];
     const alternativesForSpecificDemocracy: IAlternative[] = [];
@@ -37,7 +39,9 @@ export const getAllAlternatives = async (democracyId: string): Promise<IAlternat
   }
 };
 
-export const setAlternative = async (alternative: IAlternative): Promise<void> => {
+export const setAlternative = async (
+  alternative: IAlternative,
+): Promise<void> => {
   try {
     await setItem('alternatives', alternative);
   } catch (error) {
