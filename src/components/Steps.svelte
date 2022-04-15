@@ -30,8 +30,8 @@
               STEP 1
             </h2>
             <p class="leading-relaxed">
-              A status quo change has been proposed and a democracy is formed in
-              order to correct this proposal.
+              A status quo change is proposed to a group of people and a
+              democracy is formed in order to help them correct its text.
             </p>
           </div>
         </div>
@@ -63,8 +63,9 @@
               STEP 2
             </h2>
             <p class="leading-relaxed">
-              The voters engage in generalized liquid voting in order to elect
-              their temporary representatives in the parliament.
+              The voters delegate shares of their available voting power to one
+              another in order to elect their temporary representatives in the
+              parliament.
             </p>
           </div>
         </div>
@@ -131,40 +132,10 @@
               STEP 4
             </h2>
             <p class="leading-relaxed">
-              Step 2 happens again. Each time a voter changes their voting power
+              Step 2 again. Each time a voter changes their voting power
               distribution, a percentage of it is lost. If noone changes their
               voting power between two periods or the parliament remains
               unchanged, the corrections stop.
-            </p>
-          </div>
-        </div>
-        <div class="flex relative">
-          <div
-            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10"
-          >
-            <svg
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              class="w-5 h-5"
-              viewBox="0 0 24 24"
-            >
-              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-              <path d="M22 4L12 14.01l-3-3"></path>
-            </svg>
-          </div>
-          <div class="flex-grow pl-4">
-            <h2
-              class="font-medium title-font text-sm text-black dark:text-gray-400 mb-1 tracking-wider"
-            >
-              FINISH
-            </h2>
-            <p class="leading-relaxed">
-              Final judgement. Voters distribute (optionally) their voting power
-              one last time and then vote. The result is final and the democracy
-              is dissolved.
             </p>
           </div>
         </div>

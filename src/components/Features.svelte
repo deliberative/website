@@ -22,12 +22,12 @@
         <h2
           class="text-black dark:text-white text-lg title-font font-medium mb-2"
         >
-          Generalized Liquid Voting
+          Liquid Voting
         </h2>
         <p class="leading-relaxed text-base">
-          Voters participate in the decision making if and when they want to. If
-          not, they can transfer pecentages of their voting power to other
-          voters.
+          Voters participate in the decision making process if and when they
+          want to. If not, they can transitively delegate shares of their voting
+          power to other voters.
         </p>
         <a
           href="https://arxiv.org/pdf/2109.01436.pdf"
@@ -60,7 +60,8 @@
         </h2>
         <p class="leading-relaxed text-base">
           Those with the most accumulated voting power become members of a
-          dynamic parliament for a specified time.
+          dynamic deliberative committee. They can then author corrections to a
+          status-quo change proposal.
         </p>
         <a
           href="https://arxiv.org/pdf/2109.01436.pdf"
@@ -120,12 +121,12 @@
         <h2
           class="text-black dark:text-white text-lg title-font font-medium mb-2"
         >
-          Generalized Approval Voting
+          Finite Deliberation
         </h2>
         <p class="leading-relaxed text-base">
-          After the parliaments have exhausted their corrections, the voters
-          allocate percentages of their voting power to the available proposal
-          alternatives.
+          Every voting power delegation dilutes its value. If nothing changes in
+          the voting power distribution of the society, the process stops. These
+          assumptions make the process finite.
         </p>
         <a
           href="https://arxiv.org/pdf/2109.01436.pdf"

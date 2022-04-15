@@ -5,21 +5,22 @@ module.exports = {
     node: false,
   },
   extends: [
-    'airbnb',
+    // 'airbnb',
+    'prettier',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ['./tsconfig.json'],
+    project: ['tsconfig.json'],
     ecmaVersion: 2021,
     sourceType: 'module',
     extraFileExtensions: ['.svelte'],
   },
   overrides: [
     {
-      files: ['src/**/*.svelte'],
+      files: ['src/**/**/**/*.svelte'],
       processor: 'svelte3/svelte3',
     },
   ],

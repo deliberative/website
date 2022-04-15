@@ -6,7 +6,7 @@ interface SubscribedEmail {
   date: Date;
 }
 
-const defaultItems: SubscribedEmail[] = [
+const defaultState: SubscribedEmail[] = [
   {
     email: '',
     subscribed: false,
@@ -14,22 +14,31 @@ const defaultItems: SubscribedEmail[] = [
   },
 ];
 
-const defaultItemsString = JSON.stringify(defaultItems);
+const getStoredSubscribedEmailState = () => {
+  const storedStateString =
+    localStorage.getItem('SUBSCRIBED_EMAILS') || JSON.stringify(defaultState);
+  const state: SubscribedEmail[] = JSON.parse(
+    storedStateString,
+  ) as SubscribedEmail[];
+
+  return state;
+};
 
 const createSubscribedEmailsStore = () => {
-  const { set, subscribe, update } = writable<SubscribedEmail[]>(
-    JSON.parse(localStorage.getItem('subscriptions') || defaultItemsString),
-  );
+  const state = getStoredSubscribedEmailState();
+  const { set, subscribe, update } = writable<SubscribedEmail[]>(state);
 
   subscribe((value) =>
-    localStorage.setItem('subscriptions', JSON.stringify(value)),
+    localStorage.setItem('SUBSCRIBED_EMAILS', JSON.stringify(value)),
   );
 
   return {
     isSubscribed: (email: string) => {
-      const subscriptions = localStorage.getItem('subscriptions');
+      const subscriptions = localStorage.getItem('SUBSCRIBED_EMAILS');
       if (!subscriptions) return false;
-      const subscriptionEmails: SubscribedEmail[] = JSON.parse(subscriptions);
+      const subscriptionEmails: SubscribedEmail[] = JSON.parse(
+        subscriptions,
+      ) as SubscribedEmail[];
       if (!subscriptionEmails || subscriptionEmails.length === 0) return false;
 
       let sub = false;
@@ -41,12 +50,13 @@ const createSubscribedEmailsStore = () => {
 
       return sub;
     },
-    add: (subscription: SubscribedEmail) => {
-      update((state) => {
-        state.push(subscription);
-        set(state);
 
-        return state;
+    add: (subscription: SubscribedEmail) => {
+      update((s) => {
+        s.push(subscription);
+        set(s);
+
+        return s;
       });
     },
   };

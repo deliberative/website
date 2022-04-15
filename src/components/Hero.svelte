@@ -23,13 +23,13 @@
       <h1
         class="my-4 text-3xl md:text-5xl text-purple-800 dark:text-purple-500 font-bold leading-tight text-center md:text-left slide-in-bottom-h1"
       >
-        Blockchain-based deliberative democracy.
+        Deliberative democracy with distributed ledgers.
       </h1>
       <p
         class="leading-normal text-base md:text-2xl text-black dark:text-gray-300 mb-8 text-center md:text-left slide-in-bottom-subtitle"
       >
-        We use liquid voting and tokenomics to create the infrastructure for
-        resilient, internet-era democracies.
+        We provide the infrastructure for modern representative democracies in
+        the browser.
       </p>
 
       <p
