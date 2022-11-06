@@ -25,12 +25,12 @@ const icoPath = path.join(
   'src',
   'static',
   'images',
-  'logo-icon-dark.jpeg',
+  'logo-icon-dark.ico',
 );
-const jpeg = fs.readFileSync(icoPath);
+const ico = fs.readFileSync(icoPath);
 const icoOutpath = path.join(process.cwd(), 'dist', 'static', 'images');
 fs.mkdirSync(icoOutpath, { recursive: true });
-fs.writeFileSync(icoOutpath + path.sep + 'logo-icon-dark.jpeg', jpeg);
+fs.writeFileSync(icoOutpath + path.sep + 'logo-icon-dark.ico', ico);
 
 const htmlPath = browserPath.replace('index.js', 'index.html');
 const html = fs.readFileSync(htmlPath, 'utf8');
