@@ -19,3 +19,25 @@ minify(unminified, {
 });
 
 fs.writeFileSync(browserPath.replace('index.js', 'CNAME'), 'deliberative.eu');
+
+const icoPath = path.join(
+  process.cwd(),
+  'src',
+  'static',
+  'images',
+  'logo-icon-dark.jpeg',
+);
+const jpeg = fs.readFileSync(icoPath);
+const icoOutpath = path.join(process.cwd(), 'dist', 'static', 'images');
+fs.mkdirSync(icoOutpath, { recursive: true });
+fs.writeFileSync(icoOutpath + path.sep + 'logo-icon-dark.jpeg', jpeg);
+
+const htmlPath = browserPath.replace('index.js', 'index.html');
+const html = fs.readFileSync(htmlPath, 'utf8');
+fs.writeFileSync(
+  htmlPath,
+  html.replace(
+    '</head>',
+    '<link rel="icon" type="image/x-icon" href="/static/images/logo-icon-dark.ico">\n</head>',
+  ),
+);

@@ -111,7 +111,7 @@ export default {
           {
             name: 'description',
             content:
-              'We use liquid voting and tokenomics to create the infrastructure for resilient, internet-era democracies',
+              'We use generalized liquid voting and distributed ledgers to create resilient, internet-era democracies',
           },
           {
             name: 'author',

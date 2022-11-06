@@ -22,7 +22,7 @@
       <h1
         class="my-4 text-3xl md:text-5xl text-purple-800 dark:text-purple-500 font-bold leading-tight text-center md:text-left slide-in-bottom-h1"
       >
-        Deliberative democracy with distributed ledgers.
+        Imagine digital deliberation with distributed ledgers.
       </h1>
       <p
         class="leading-normal text-base md:text-2xl text-black dark:text-gray-300 mb-8 text-center md:text-left slide-in-bottom-subtitle"

@@ -25,6 +25,7 @@
 
       const headers = new Headers({
         'content-type': 'application/json',
+        'access-control-allow-origin': 'https://newsletter.deliberative.eu/*',
       });
 
       const body = JSON.stringify({
