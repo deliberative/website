@@ -5,7 +5,6 @@ import replace from '@rollup/plugin-replace';
 import html from '@rollup/plugin-html';
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
-import { terser } from 'rollup-plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
@@ -91,11 +90,11 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production &&
-      terser({
-        compress: production,
-        mangle: production,
-      }),
+    // production &&
+    //   terser({
+    //     compress: production,
+    //     mangle: production,
+    //   }),
 
     production &&
       html({

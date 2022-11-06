@@ -35,6 +35,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development rollup --config rollup.config.ts --configPlugin typescript --bundleConfigAsCjs -w",
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.ts --configPlugin typescript --bundleConfigAsCjs",
+    "postbuild": "node scripts/postBuild.js",
     "validate": "svelte-check",
     "test": "jest --config jest.config.json",
     "format": "prettier --write src",
@@ -75,11 +76,10 @@
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-serve": "^2.0.1",
     "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^7.0.2",
     "svelte-check": "^2.2.0",
     "svelte-preprocess": "^4.7.3",
     "tailwindcss": "^3.0.12",
-    "terser": "^5.10.0",
+    "terser": "^5.15.1",
     "ts-jest": "^29.0.3",
     "tslib": "^2.3.1",
     "typescript": "^4.3.4"
