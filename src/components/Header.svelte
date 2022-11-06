@@ -3,6 +3,8 @@
   import ToggleDarkMode from './buttons/ToggleDarkMode.svelte';
   import Github from './buttons/Github.svelte';
   import Discord from './buttons/Discord.svelte';
+  import Twitter from './buttons/Twitter.svelte';
+  import Linkedin from './buttons/Linkedin.svelte';
 </script>
 
 <header class="text-gray-600 body-font bg-white dark:bg-gray-900">
@@ -20,6 +22,8 @@
     >
       <Github />
       <Discord />
+      <Twitter />
+      <Linkedin />
     </nav>
     <div class="hidden md:block">
       <ToggleDarkMode />

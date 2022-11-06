@@ -103,10 +103,17 @@
       >
         Error
       </button>
-    {:else if isUnsubscribed}
+    {:else if isUnsubscribed && hasAgreedToSubscribe}
       <button
         class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded"
         on:click="{handleSubscribe}"
+      >
+        Subscribe
+      </button>
+    {:else}
+      <button
+        class="inline-flex text-white bg-indigo-100 border-0 py-2 px-6 focus:outline-none rounded"
+        disabled
       >
         Subscribe
       </button>
@@ -114,8 +121,8 @@
     <p
       class="text-gray-500 text-sm md:ml-6 md:mt-0 mt-2 sm:text-left text-center"
     >
-      Subscribe to our newsletter to get updates about upcoming coin offerings,
-      <br class="lg:block hidden" />presales, airdrops and other interesting
+      Subscribe to our newsletter to get updates about upcoming offerings,
+      <br class="lg:block hidden" />events, research and other interesting
       stuff.
     </p>
   </div>

@@ -1,12 +1,11 @@
 <script>
-  import { fade } from 'svelte/transition';
+  /* import { fade } from 'svelte/transition'; */
 
   import DownloadApp from './DownloadApp.svelte';
   import DevicesBackground from './DevicesBackground.svelte';
 </script>
 
 <section
-  transition:fade
   class="text-black dark:text-gray-400 bg-white dark:bg-gray-900 body-font"
 >
   <div
@@ -28,10 +27,10 @@
       <p
         class="leading-normal text-base md:text-2xl text-black dark:text-gray-300 mb-8 text-center md:text-left slide-in-bottom-subtitle"
       >
-        We provide the infrastructure for modern representative democracies in
-        the browser.
+        We provide the infrastructure for collective decision making in the
+        browser.
       </p>
-
+      <!--
       <p
         class="text-blue-400 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in"
       >
@@ -39,6 +38,7 @@
       </p>
 
       <DownloadApp />
+-->
     </div>
   </div>
 </section>

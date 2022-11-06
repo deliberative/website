@@ -76,10 +76,9 @@ export default {
       serve({
         open: true,
         host: 'localhost',
-        port: 5000,
+        port: '5000',
         contentBase: 'public',
         verbose: true,
-        spa: true,
       }),
 
     // Watch the `public` directory and refresh the
@@ -101,7 +100,7 @@ export default {
     production &&
       html({
         fileName: 'index.html',
-        title: 'The deliberative democracy infrastructure.',
+        title: 'The digital infrastructure for collective decision making.',
         meta: [
           {
             charset: 'utf8',
@@ -117,17 +116,17 @@ export default {
           },
           {
             name: 'author',
-            content: 'Fuzznets P.C.',
+            content: 'Deliberative Technologies P.C.',
           },
           {
             name: 'copyright',
-            content: 'Fuzznets P.C.',
+            content: 'Deliberative Technologies P.C.',
           },
           { name: 'robots', content: 'index,follow' },
           {
             name: 'keywords',
             content:
-              'substrate,delib,dlb,democracy,liquid democracy,liquid voting,generalized liquid voting,approval voting,generalized approval voting,deliberative democracy,deliberate,deliberative democracy infrastructure,infrastructure provider,europe,voting,blockchain,blockchain voting,cryptocurrency',
+              'deliberative,democracy,liquid democracy,liquid voting,generalized liquid voting,approval voting,generalized approval voting,deliberative democracy,deliberate,deliberative democracy infrastructure,infrastructure provider,europe,voting,blockchain,blockchain voting,cryptocurrency',
           },
           {
             'http-equiv': 'X-UA-Compatible',

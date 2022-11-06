@@ -8,7 +8,7 @@
   >
     <HomeButton />
     <p class="text-sm text-black dark:text-gray-200 sm:ml-6 sm:mt-0 mt-4">
-      &copy; Fuzznets P.C. 2022
+      &copy; Deliberative Technologies P.C. 2022
     </p>
   </div>
 </div>
