@@ -34,6 +34,8 @@
       const req = new Request('https://newsletter.deliberative.eu/subscribe', {
         method: 'POST',
         mode: 'cors',
+        async: true,
+        crossOrigin: true,
         headers,
         body,
       });
