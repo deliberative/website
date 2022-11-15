@@ -31,7 +31,7 @@
         email,
       });
 
-      const req = new Request('https://newsletter.deliberative.eu/subscribe', {
+      const req = new Request('https://mailinglist.deliberative.eu/subscribe', {
         method: 'POST',
         mode: 'cors',
         async: true,
@@ -44,14 +44,17 @@
       const resJson = await response.json();
 
       isSubscribing = false;
-      if (resJson.id) {
+      if (
+        resJson.message ===
+        'An email has been sent to your address to confirm your subscription.'
+      ) {
         subscriptions.add({
           email,
           subscribed: true,
           date: new Date(),
         });
         isSubscribed = true;
-      } else if (resJson.message) {
+      } else {
         isSubscribed = false;
         hadError = true;
       }
@@ -139,13 +142,7 @@
     <label
       for="checkbox-1"
       class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
-      >I agree to receive the Deliberative Technologies newsletter and I have
-      read and accept the <a
-        href="https://www.sendinblue.com/legal/termsofuse/"
-        class="text-blue-600 hover:underline dark:text-blue-500"
-        target="_blank"
-        rel="noopener noreferrer">Sendinblue Inc. terms and conditions</a
-      ></label
-    >.
+      >I agree to receive the Deliberative Technologies newsletter.
+    </label>.
   </div>
 </div>
