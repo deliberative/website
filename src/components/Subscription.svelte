@@ -25,6 +25,7 @@
 
       const headers = new Headers({
         'content-type': 'application/json',
+        origin: 'https://deliberative.eu',
       });
 
       const body = JSON.stringify({
