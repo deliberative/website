@@ -3,6 +3,7 @@
   import Loading from './Loading.svelte';
 
   let email = '';
+  let mailinglistMessage = '';
   let isSubscribing = false;
   let isSubscribed = false;
   let isUnsubscribed = !isSubscribed;
@@ -25,7 +26,6 @@
 
       const headers = new Headers({
         'content-type': 'application/json',
-        origin: 'https://deliberative.eu',
       });
 
       const body = JSON.stringify({
@@ -132,6 +132,13 @@
       stuff.
     </p>
   </div>
+  {#if message !== ''}
+    <div class="flex flex-wrap mt-5">
+      <p class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+        {message}
+      </p>
+    </div>
+  {/if}
   <div class="flex flex-wrap mt-5">
     <input
       id="checkbox-1"
