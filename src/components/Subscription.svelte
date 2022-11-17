@@ -45,6 +45,7 @@
       const resJson = await response.json();
 
       isSubscribing = false;
+      mailinglistMessage = resJson.message;
       if (
         resJson.message ===
         'An email has been sent to your address to confirm your subscription.'
@@ -132,10 +133,10 @@
       stuff.
     </p>
   </div>
-  {#if message !== ''}
+  {#if mailinglistMessage !== ''}
     <div class="flex flex-wrap mt-5">
       <p class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-        {message}
+        {mailinglistMessage}
       </p>
     </div>
   {/if}
