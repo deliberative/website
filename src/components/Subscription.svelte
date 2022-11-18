@@ -19,6 +19,7 @@
     try {
       if (isSubscribed) return;
       if (email.length < 5) return;
+      if (email.length > 70) return;
       if (!hasAgreedToSubscribe) return;
 
       hadError = false;
@@ -32,7 +33,7 @@
         email,
       });
 
-      const req = new Request('https://mailinglist.deliberative.eu/subscribe', {
+      const req = new Request('https://mailinglist.deliberative.io/subscribe', {
         method: 'POST',
         mode: 'cors',
         async: true,
@@ -57,8 +58,13 @@
         });
         isSubscribed = true;
       } else {
-        isSubscribed = false;
-        hadError = true;
+        if (resJson.statusCode === 200) {
+          isSubscribed = true;
+          hadError = false;
+        } else {
+          isSubscribed = false;
+          hadError = true;
+        }
       }
       isUnsubscribed = !isSubscribed;
     } catch (e) {
