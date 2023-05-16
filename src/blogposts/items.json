@@ -1,0 +1,14 @@
+{
+  "blogposts": [
+    {
+      "title": "How to reverse the delegation of secret voting power",
+      "date": "2023-05-17",
+      "path": "reversing-secret-voting-power"
+    },
+    {
+      "title": "Introducing the @deliberative/crypto npm package",
+      "date": "2023-05-09",
+      "path": "introducing-deliberative-crypto-package"
+    }
+  ]
+}

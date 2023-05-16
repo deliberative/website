@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    /* @apply bg-gradient-to-b from-neutral-50 to-indigo-50; */
+    @apply bg-white;
+    /* @apply dark:from-slate-950 dark:to-indigo-950; */
+    @apply dark:bg-neutral-900;
+  }
+
+  a,
+  a:hover,
+  a:focus,
+  a:active,
+  button,
+  button:hover,
+  button:focus,
+  button:active {
+    text-decoration: none !important;
+    @apply hover:outline-none focus:outline-none active:outline-none;
+  }
+}
+
+@layer components {
+  .btn-big-filled {
+    @apply block w-full rounded px-12 py-3 text-sm font-medium shadow border sm:w-auto focus:outline-none;
+    @apply text-slate-100 hover:text-slate-50;
+    @apply dark:text-slate-50 hover:dark:text-neutral-50;
+    @apply bg-purple-900 hover:bg-purple-950 active:bg-purple-800;
+    @apply dark:bg-purple-800 hover:dark:bg-purple-900 active:dark:bg-purple-700;
+    @apply border-purple-900 hover:border-purple-950 active:bg-purple-800;
+    @apply dark:border-purple-800 hover:dark:border-purple-900 active:dark:border-purple-700;
+  }
+
+  .btn-big-transparent {
+    @apply block w-full rounded px-12 py-3 text-sm font-medium shadow border sm:w-auto focus:outline-none;
+    @apply text-purple-900 dark:text-slate-50 border border-purple-900 dark:border-slate-50 hover:text-purple-700 focus:outline-none active:text-purple-500;
+  }
+}
